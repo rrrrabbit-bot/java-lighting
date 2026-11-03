@@ -1,0 +1,22 @@
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+=====================================================
+
+JavaLighting — a client-side Minecraft Bedrock Edition mod that brings the
+block lighting and shadow look closer to Java Edition.
+
+The project source code, the resource pack JSON, the generator tooling and the
+documentation are dedicated to the public domain under CC0 1.0. You may copy,
+modify, distribute and use them for any purpose, commercial or not, without
+asking permission.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Notes
+-----
+* This project contains no Minecraft (Bedrock or Java) code, binaries, textures
+  or other game assets. The Java Edition lightmap algorithm is re-implemented
+  from publicly documented decompiled behaviour; quoted snippets in the
+  documentation are used for explanation only.
+* "Minecraft" is a trademark of Mojang Studios. This project is not affiliated
+  with Mojang Studios or Microsoft.
+* The mod is client-side only and does not modify game files or world saves.

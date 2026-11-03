@@ -1,0 +1,11 @@
+.xmake/
+build/
+bin/
+dist/
+.build-tools/
+xmake-*/
+*.user
+.vs/
+.idea/
+.cache/
+compile_commands.json

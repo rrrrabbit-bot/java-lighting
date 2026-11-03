@@ -1,0 +1,50 @@
+{
+  "format_version": 3,
+  "format_uuid": "d3f0a6e2-5f7b-4c1a-9d34-2b8e7c6a1904",
+  "tooth": "github.com/your-name/java-lighting",
+  "version": "0.1.0",
+  "info": {
+    "name": "JavaLighting",
+    "description": "Makes Minecraft Bedrock Edition lighting and shadows look closer to Java Edition (Vibrant Visuals presets + native helpers).",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://example.com/java-lighting/avatar.png"
+  },
+  "variants": [
+    {
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina#client": "26.51.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/java-lighting-client-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "java-lighting/",
+              "dest": "mods/java-lighting/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "pre_pack": [],
+        "post_pack": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

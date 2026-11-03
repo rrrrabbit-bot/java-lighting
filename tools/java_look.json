@@ -1,0 +1,36 @@
+{
+  "_comment": "Tuning for the Java-look Vibrant Visuals preset. Read by tools/gen_reference.py. See docs/DESIGN.md for the reasoning behind each number.",
+  "shadowStyle": "blocky_shadows",
+  "texelSize": 16,
+
+  "sunIlluminance": {
+    "0.0": 109880.0,
+    "0.25": 20000.0,
+    "0.35": 400.0,
+    "0.5": 1.0,
+    "0.65": 400.0,
+    "0.75": 20000.0,
+    "1.0": 109880.0
+  },
+  "sunColor": "#FFF7EC",
+  "moonIlluminance": 0.27,
+  "moonColor": "#C6D4FF",
+
+  "ambientIlluminance": 0.1,
+  "ambientColor": "#FFFFFF",
+  "skyIntensity": 0.8,
+
+  "blockLightSample": 0.5,
+  "staticLightBlocks": [
+    "torch",
+    "redstone_torch",
+    "end_rod",
+    "lantern",
+    "soul_lantern",
+    "soul_torch",
+    "candle",
+    "sea_pickle",
+    "copper_torch",
+    "copper_lantern"
+  ]
+}

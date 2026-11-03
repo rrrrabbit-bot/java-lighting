@@ -188,8 +188,8 @@ void dumpImage(ImageView const& view, LiveLightInputs const& in, std::string con
 // ---------------------------------------------------------------------------
 // Hook implementation
 // ---------------------------------------------------------------------------
-JavaLightmap::LightmapSettings makeSettings(config::Config const& cfg, LiveLightInputs const& in) {
-    JavaLightmap::LightmapSettings s;
+LightmapSettings makeSettings(config::Config const& cfg, LiveLightInputs const& in) {
+    LightmapSettings s;
     if (cfg.lightmap.useLiveLightData) {
         if (in.gamma >= 0.0f && in.gamma <= 1.0f) { s.gamma = in.gamma; }
         float sky = in.skyDarken;

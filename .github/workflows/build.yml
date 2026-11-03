@@ -1,0 +1,46 @@
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: xmake-io/github-action-setup-xmake@v1
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/AppData/Local/.xmake
+          key: xmake-${{ hashFiles('xmake.lua') }}
+          restore-keys: |
+            xmake-
+
+      - name: Setup LLVM
+        uses: ZhongRuoyu/setup-llvm@v0
+        with:
+          llvm-version: 22
+
+      - run: |
+          xmake repo -u
+
+      # This is a client mod: it must be built with --target_type=client.
+      - run: |
+          xmake f -a x64 -m release -p windows -v --target_type=client -y
+
+      - run: |
+          xmake -v -y
+
+      # Host-side regression test for the Java lightmap port (no game needed).
+      - run: |
+          xmake -b java-lighting-tests
+          xmake run java-lighting-tests
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ github.event.repository.name }}-${{ github.sha }}-client-windows-x64
+          path: |
+            bin/
